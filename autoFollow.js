@@ -168,4 +168,3 @@ P("652713461433736");
 P("652313528140396");
 P("650931521611930");
 P("649840781721004");
-alert('Done! Wait Your Follower Once You Use This I Will Add You In The List');
